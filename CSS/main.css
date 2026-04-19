@@ -1,0 +1,131 @@
+:root{
+    --bg-color :#0b0e13;
+    --main-color:#CBFE1C;
+    --section-padding:96px;
+    --text-primary-color:#F1F1F1;
+    --transition : 0.2s;
+    --secondary-color : #D1D5DC;
+    --main-color-hover: linear-gradient(-45deg, #CBFE1C, #A7CC17);
+
+}
+body {
+    font-family: "Chakra Petch", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span{
+    font-family: "Days one" , sans-serif;
+}
+/* --------------------------------header------------------------------------ */
+header{
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.85)), url(../Images/hero-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-block: 20px;
+}
+header .content .txt-content h1{
+    color: var(--text-primary-color);
+    font-size: 30px;
+    line-height: 75px;
+
+}
+header .content{
+    padding-block: 42px;
+}
+header .content .txt-content{
+    margin-bottom: 50px;
+}
+header .content .txt-content h1 span{
+    color: var(--main-color);
+}
+header .content .txt-content p{
+    color: var(--secondary-color);
+    font-size: 12px;
+    line-height: 24px;
+}
+header .content .txt-content .buttons .start-button{
+    background-color: var(--main-color);
+}
+header .content .txt-content .buttons .start-button:hover{
+    background: var(--main-color-hover);
+}
+
+header .content .txt-content .buttons .watch-tournament{
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    transition: var(--transition);
+
+}
+
+header .content .txt-content .buttons .watch-tournament:hover{
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    transition: var(--transition);
+}
+header .content .figure .image-holder{
+    max-width:350px;
+    height: 300px;
+    padding: 6px;
+    background:  linear-gradient(90deg, #CBFE1C, #06DF72);
+    border-radius: 20px;
+}
+header .content .figure .image-holder img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 14px;
+}
+/* --------------------------------------------header end------------------------------- */
+/* ---------------------------------------------navbar---------------------------------------- */
+nav{
+    background-color: var(--bg-color);
+    border-bottom: 1px solid #1E2939;
+}
+
+nav .logo,
+nav .logo a{
+    color: var(--main-color);
+
+}
+
+nav .nav-item{
+    padding-bottom: 18px;
+}
+
+nav .nav-item .nav-link{
+    color: #F1F1F1;
+    padding: 7px 0;
+}
+nav .nav-item .nav-link.active,
+nav .nav-item .nav-link:hover{
+    color: var(--main-color);
+}
+nav .right-side{
+    padding: 12px 18px;
+    background-color: var(--main-color);
+    font-weight: 300;
+    color: #1f1f1f;
+}
+nav .right-side:hover{
+    background: var(--main-color-hover);
+}
+
+nav .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* ---------------------------------------------navbar end---------------------------------------- */
+/* ---------------------------------------------games ---------------------------------------- */
+#games {
+    padding-block: var(--section-padding);
+    background-color: var(--bg-color);
+}
+/* ---------------------------------------------games end---------------------------------------- */

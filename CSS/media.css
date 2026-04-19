@@ -1,0 +1,30 @@
+@media screen and (min-width: 768px) {
+    header .content .txt-content h1{
+        font-size: 3.75rem;
+    }
+    header .content .txt-content p{
+        font-weight: 400;
+        max-width: 35rem;
+        font-size: 16px;
+        line-height: 26px;
+    }
+    header .content .txt-content .buttons span{
+        padding: 1rem 2rem;
+    }
+    header .content .figure .image-holder{
+        max-width:600px;
+        height: 350px;
+    }
+    nav .icon-container{
+        border-top: none !important;
+        padding: 5px !important;
+    }
+    nav .nav-item{
+        padding-bottom: 0px;
+    }
+    nav .icons{
+        margin-bottom: 0px !important;
+        justify-content: center;
+        align-items: center;
+    }
+}

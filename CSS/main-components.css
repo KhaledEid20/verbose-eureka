@@ -1,0 +1,33 @@
+:root{
+    --transition : 20s;
+
+}
+.button-shine{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+.button-shine::before{
+    content: "";
+    position: absolute;
+    height: 250%;
+    width: 60px;
+    top: 0;
+    left : -60px;
+    background: linear-gradient(90deg ,transparent , rgba(255, 255, 255, 0.7) , transparent);
+    z-index: 9999;
+    transition: var(--transition);
+
+}
+.button-shine:hover::before{
+    animation: shine 0.5s ease-in infinite;
+}
+@keyframes shine {
+    0%{
+        left: -80px;
+    }
+
+    100%{
+        left: 100%
+    }
+}
