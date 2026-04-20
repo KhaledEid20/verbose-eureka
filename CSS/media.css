@@ -13,7 +13,7 @@
     }
     header .content .figure .image-holder{
         max-width:600px;
-        height: 350px;
+        height: 400px;
     }
     nav .icon-container{
         border-top: none !important;
@@ -27,4 +27,12 @@
         justify-content: center;
         align-items: center;
     }
+    #games .carousel-inner .image-holder{
+        width: 390px;
+        height: 300px;
+    }
+    #games .buttons span{
+        width: fit-content;
+    }
+    
 }
