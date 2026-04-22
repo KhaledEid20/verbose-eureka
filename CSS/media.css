@@ -34,5 +34,15 @@
     #games .buttons span{
         width: fit-content;
     }
-    
+    #work .row .card{
+    height: 280px;
+}
+    #work .row .card .card-body{
+        gap: 20px!important;
+    }
+    #work .row .card .card-body span{
+        font-size: 25px!important;
+        display: block;
+        width: 75%;
+    }
 }

@@ -1,7 +1,7 @@
 :root{
     --bg-color :#0b0e13;
     --main-color:#CBFE1C;
-    --section-padding:96px;
+    --section-padding:40px;
     --text-primary-color:#F1F1F1;
     --transition : 0.2s;
     --secondary-color : #D1D5DC;
@@ -17,21 +17,20 @@ h2,
 h3,
 h4,
 h5,
-h6,
-span{
+h6{
     font-family: "Days one" , sans-serif;
 }
 
-.section-head span{
+.section-head .head-text{
     color: var(--main-color);
-    font-size: 20px;
+    font-size: 16px;
     position: relative;
     margin-bottom: 20px;
     font-weight: 700;
     text-shadow: 0 0 8px #CBFE1C;
 }
-.section-head span::before,
-.section-head span::after{
+.section-head .head-text::before,
+.section-head .head-text::after{
     content: "";
     position: absolute;
     width: 70px;
@@ -40,7 +39,7 @@ span{
     transform: translateY(50%);
     text-shadow: inherit;
 }
-.section-head span::before{
+.section-head .head-text::before{
 
     left: -80px;
     background: linear-gradient(90deg, transparent, var(--main-color));;
@@ -53,6 +52,11 @@ span{
 }
 .section-head h2{
     color: var(--secondary-color);
+}
+
+#games , #work {
+    padding-block: var(--section-padding);
+    background-color: var(--bg-color);
 }
 
 /* --------------------------------header------------------------------------ */
@@ -158,10 +162,7 @@ nav .navbar-toggler:focus {
 
 /* ---------------------------------------------navbar end---------------------------------------- */
 /* ---------------------------------------------games ---------------------------------------- */
-#games {
-    padding-block: var(--section-padding);
-    background-color: var(--bg-color);
-}
+
 #games .carousel-inner .image-holder{
     width: 360px;
     height: 200px;
@@ -230,3 +231,152 @@ nav .navbar-toggler:focus {
 }
 
 /* ---------------------------------------------games end---------------------------------------- */
+/* ----------------------------------------------work------------------------------------------- */
+
+#work .section-head div p{
+    color: var(--secondary-color);
+    font-size: 3px;
+}
+#work .section-head div p span{
+    color: var(--main-color);
+}
+
+#work .row .card{
+    height: 150px;
+    background-color: #1A1A1A;
+    transition: border var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+#work .row .card:not(.image-card)::after,
+#work .row .card:not(.image-card)::before{
+    content: "";
+    position: absolute;
+    transition: all var(--transition);
+}
+#work .row .card:not(.image-card)::after{
+    right: -20px;
+    bottom: -20px;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid var(--main-color);
+}
+#work .row .card:not(.image-card)::before{
+    left: -20px;
+    top: -20px;
+    border-right: 20px solid transparent;
+    border-top: 20px solid var(--main-color);
+}
+#work .row .card:not(.image-card):hover::after{
+    right: 15px;
+    bottom: 15px;
+    transition: var(--transition);
+}
+#work .row .card:not(.image-card):hover::before{
+    left: 15px;
+    top: 15px;
+    transition: var(--transition);
+}
+
+#work .row .card span{
+    color: var(--secondary-color);
+    text-shadow: 0 0 8px var(--secondary-color)
+
+}
+
+#work .row .card .icon{
+    background-color: #1E2939;
+
+}
+#work .row .card .icon i{
+    color: var(--main-color);
+}
+
+
+#work .row .card:not(.image-card):hover{
+    border: 1px solid var(--main-color);
+    transition: var(--transition);
+}
+#work .row .card:hover .icon{
+    background-color: var(--main-color);
+    transition: var(--transition);
+}
+#work .row .card:hover .icon i{
+    color: black;
+    transition: var(--transition);
+
+}
+
+#work .row  .image-card img{
+    object-fit: cover;
+    object-position: 100% 70%;
+}
+
+#work .shadow-line{
+    height: 4px;
+    width: 100%;
+    background: #000;
+    position: relative;
+    margin-block: 50px;
+    box-shadow: var(--main-color) 3px;
+}
+#work .shadow-line::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    transform: translateY(-50%);
+    
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #b6ff00,
+        var(--main-color),
+        #b6ff00,
+        transparent
+    );
+    filter: blur(1px);
+}
+#work .latest-games{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow-x: auto;
+}
+
+#work .latest-games::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(203, 254, 28 , 0.5) 0%,
+        rgba(203, 254, 28 , 0.3) 25%,
+        rgba(203, 254, 28 , 0.2) 40%,
+        rgba(203, 254, 28 , 0.08) 60%,
+        rgba(203, 254, 28 , 0.01) 70%,
+        transparent 80%
+    );
+    filter: blur(30px);
+}
+#work .latest-games {
+    overflow: hidden;
+}
+
+/* THIS is the moving element */
+
+/* images */
+#work .latest-games .image-holder {
+    flex: 0 0 auto;
+    width: 80px;
+}
+
+#work .latest-games .image-holder img {
+    width: 100%;
+}
+swiper-container swiper-slide{
+    width: fit-content;
+}
+/* -------------------------------------------------work ends ---------------------------------------- */
